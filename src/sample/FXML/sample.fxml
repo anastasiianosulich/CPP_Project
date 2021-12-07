@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="900" maxWidth="1300"
+            prefHeight="900" prefWidth="1300"
+            xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller.Controller"
+            style="-fx-background-color:#b9cfd4">
+    <center  >
+        <AnchorPane fx:id="elevatorPane"   prefHeight="500" prefWidth="1300" BorderPane.alignment="CENTER" />
+    </center>
+   <bottom>
+        <AnchorPane prefHeight="400" prefWidth="1300" style="-fx-background-color:#b9cfd4"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="#3b3b3b" fontSmoothingType="LCD" layoutX="50"  layoutY="40.0"
+                      strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Elevators"  textAlignment="CENTER">
+                    <font >
+                        <Font name="Nachlieli CLM" size="37.0" />
+                    </font>
+                </Text>
+
+                <ComboBox fx:id="elevatorsCount" layoutX="100.0" layoutY="100.0"  prefWidth="60"/>
+                <Label layoutX="100.0" layoutY="60.0" text="Elevators:" textFill="#3b3b3b">
+                    <font>
+                        <Font name="Poor Richard" size="20.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="200.0" layoutY="60.0" text="Floors:" textFill="#3b3b3b">
+                    <font>
+                        <Font name="Poor Richard" size="20.0" />
+                    </font>
+                </Label>
+
+                <ComboBox fx:id="floorsCount" layoutX="200.0" layoutY="100.0"  prefWidth="60" />
+
+
+                <Button layoutX="1100" layoutY="100.0"
+                        mnemonicParsing="false" onAction="#onStart"
+                        prefHeight="60" prefWidth="150.0"
+                        style="-fx-background-color: #000000, linear-gradient(#34a1b4,#016274);-fx-border-color: #016274;" text="Start" textFill="#fafafa">
+                    <font>
+                        <Font name="Poor Richard" size="20.0" />
+                    </font>
+                </Button>
+
+
+
+            <ComboBox fx:id="strategy_cb" layoutX="600" layoutY="100" prefWidth="120" />
+            <ComboBox fx:id="passangers_cb" layoutX="400" layoutY="100" prefWidth="60" />
+            <Spinner fx:id="weight_sp" layoutX="500" layoutY="100"  prefWidth="60" />
+
+                <Label layoutX="600" layoutY="40" text="Strategy:" textFill="#016274" >
+                    <font>
+                        <Font name="MV Boli" size="29.0" />
+                    </font>
+                </Label>
+
+            <Label layoutX="400.0" layoutY="60"
+                   text="Queue size" >
+               <font>
+                   <Font name="Poor Richard" size="20.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="500" layoutY="60" text="Weight" textFill="#3b3b3b">
+               <font>
+                   <Font name="Poor Richard" size="20.0" />
+               </font>
+            </Label>
+
+                <ComboBox fx:id="min_time_cb" layoutX="300" layoutY="100"
+                          prefWidth="60" />
+                <Label layoutX="300" layoutY="60.0" text="Time:" textFill="#3b3b3b">
+                    <font>
+                        <Font name="Poor Richard" size="20.0" />
+                    </font>
+                </Label>
+
+
+            </children>
+        </AnchorPane>
+   </bottom>
+</BorderPane>
